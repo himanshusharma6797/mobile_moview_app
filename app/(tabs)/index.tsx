@@ -1,12 +1,13 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Index() {
   return (
-    <View
+    <SafeAreaView
       className="flex-1 items-center justify-center bg-white"
     >
-      <Text className="text-5xl text-primary font-bold mb-2">Welcoome!</Text>
+      <Text className="text-5xl text-primary font-bold mb-2">Welcome!</Text>
       <Link href="/onboarding">Get Started</Link>
       <Link
         href={{
@@ -17,6 +18,6 @@ export default function Index() {
         New Moview Release
       </Link>
       <Link href="/movie/betaOfTheYear">New Moview Release 2026</Link>
-    </View>
+    </SafeAreaView>
   );
 }
